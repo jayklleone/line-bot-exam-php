@@ -23,7 +23,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text
+				'text' => 'idของท่าน : '.$text
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
@@ -44,7 +44,7 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
 
-			echo "idของท่าน : ". $result . "\r\n";
+			echo $result . "\r\n";
 		}
 	}
 }
